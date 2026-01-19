@@ -1,31 +1,11 @@
 ---
 title: "R and Statistical Modeling"
-subtitle: "MKTG 411 Marketing Analytics"
+subtitle: "MCB Consulting Group (MKTG 411)"
 output: 
   ioslides_presentation:
     widescreen: true
     css: style.css
 ---
-
-## Course Working Directory
-
-Create a local course folder on your computer (outside any file sync service) that includes folders for your:
-
-- Slides
-- Notes
-- Data
-- Exercises
-- Projects
-
-## RStudio Tools > Global Options
-
-- General > Save workspace to .RData on exit: Never.
-- Code > Editing > Execution > Ctrl + Enter executes: Multiple consecutive R lines.
-- Code > Editing > Use native pipe operator.
-- Code > Display > General > Highlight selected line.
-- Code > Display > General > Rainbow parentheses.
-- Code > Saving > Automatically save when editor loses focus.
-- Appearance.
 
 ## Marketing Analytics Process
 
@@ -55,39 +35,26 @@ Note that models used for inference can also be used to predict, but they are fo
 ![](Figures/workflow-inference.png){width=900px}
 </center>
 
-## Consider | Consider the Data Generating Process
+## Consider | Consider the "Story"
 
-Inference is often needed for managerial decisions in marketing because inference is required when we would like to **intervene** in the process we don't observe.
+Inference is needed for managerial decisions in marketing because we often want to **intervene** in a process we don't observe.
 
-For example, consider the managerial decision of allocating promotional spending.
+Let's look at an example...
+
+## Consider | Consider the "Story"
+
+Inference is needed for managerial decisions in marketing because we often want to **intervene** in a process we don't observe.
+
+For example, suppose we are now consulting for Kroger, a large client in the grocery/CPG industry. The client is interested in the best way to allocate promotional spending in the soup category.
 
 - What data would we use to inform this decision?
 - What is a possible process we don't observe that resulted in this data?
 
-Your story about the possible **data generating process** is the beginning of a model.
-
----
-
-It's helpful to draw the possible data generating process as a **graph**. This is a special kind of graph known as a **directed acyclic graph** or **DAG**.
-
-```{r echo=FALSE, message=FALSE, warning=FALSE}
-# Create a DAG.
-library(dagitty)
-library(ggdag)
-
-dag <- dagitty("dag {
-  F -> P
-  F -> S
-  P -> S
-}")
-
-ggdag(dag, layout = "circle") +
-  theme_dag()
-```
+Your story is the beginning of a model.
 
 ## Build | Build a Statistical Model
 
-If a model starts with a story about the *data generating process*, we need to translate it into a mathematical equation. For example:
+A model starts with a story, but we need to translate it into a mathematical equation. For example:
 
 $$\text{sales} = 10 + 3 \times \text{promotion_spend}$$
 
@@ -117,9 +84,9 @@ $$\text{sales} = \beta_0 + \beta_1 \times \text{promotion_spend} + \epsilon$$
 
 Here $\epsilon$ represents **statistical error**. Think of this $\epsilon$ as including every variable beyond `promotion_spend` that effects `sales`.
 
----
+## All Models are Wrong (But Some Are Useful)
 
-Every inferential model is a *simplification* of the *true* data generating process (which we don't observe). Even so, models can still help us learn about parameters, assuming the model is a good approximation of the true data generating process.
+Every inferential model is a *simplification* of the *true* story (which we don't observe). But, models can still help us learn about parameters, assuming the model does a good job at telling the story.
 
 <center>
 ![](Figures/models_rockets.png){width=700px}
@@ -135,7 +102,7 @@ One common preprocessing problem is dealing with discrete data.
 # Demonstrate dummy coding.
 library(tidyverse)
 
-sub_category <- read_csv(here::here("Data", "soup_data.csv")) |> 
+sub_category <- read_csv("soup_data.csv") |> 
   transmute(sub_category = Sub_Category)
 
 one_dummy <- sub_category |> 
