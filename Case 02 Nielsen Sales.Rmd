@@ -1,0 +1,32 @@
+---
+title: "MCB Consulting Group (MKTG 411)"
+subtitle: "Nielsen: Allocating Promotional Spending"
+output: pdf_document
+fontsize: 12pt
+header-includes:
+  - \usepackage{hyperref}
+  - \hypersetup{colorlinks=true,urlcolor=blue}
+---
+
+```{r preamble, echo=FALSE, message=FALSE}
+# Load packages.
+library(tidyverse)
+
+# Import data.
+soup_data <- read_csv("soup_data.csv")
+```
+
+## Case Overview
+
+As a consultant, you are frequently tasked with helping inform clients' managerial decisions. Our current client, Nielsen, collects extensive **retail data**. You will be assisting them by analyzing two years of national sales data in the soup category to inform allocation of promotional spending.
+
+Each observation is an aggregation of four weeks of sales data for a particular trade area, sub-category, and brand. In addition to sales, the data includes a wealth of other variables tied to each four-week observation, many of them created and aggregated as part of Nielsen's retail data collection.
+
+```{r data, echo=FALSE}
+glimpse(soup_data)
+```
+
+## Expectation
+
+Interventions in the marketing mix are informed by past performance. You are expected to model and clearly communicate how promotions and promotional spending are driving sales for various trade areas, sub-categories, and brands in an effort to inform future allocation of promotional spending.
+

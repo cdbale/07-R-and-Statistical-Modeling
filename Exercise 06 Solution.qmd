@@ -1,12 +1,12 @@
 ---
-title: "Exercise 9"
-author: "Marc Dotson"
+title: "Exercise 6"
+author: "Cameron Bale"
 format: docx
 ---
 
-1. Finish downloading code and materials from RStudio on Posit Cloud and Canvas and organizing your course folder.
-2. Install the {tidyverse} and {tidymodels} packages locally.
-3. Read the case and write how you might meet the expectations (no more than one page) in Quarto. Render as a Word document and submit on Canvas.
+1. Do a check-in. What worked well for you in this past unit? What didn't go well? If you have any questions or need support, reach out to a TA or the instructor (you are not graded on this part!)
+2. Have you stayed organized? If not, go back and organize the material from Unit 1. Recommit yourself to keeping files organized on your computer for Unit 2. (again - not graded on this, it's for your benefit!)
+3. Read 'Case-02-Nielsen-Sales.pdf' document that is posted on Canvas (it is located in the same subsection as this lecture). Write a response about how you might analyze the data to address the client's needs (no more than a page). Submit your response as a Word document on Canvas.
 
 **Five points total:**
 

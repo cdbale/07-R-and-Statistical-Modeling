@@ -52,6 +52,12 @@ For example, suppose we are now consulting for Kroger, a large client in the gro
 
 Your story is the beginning of a model.
 
+## Inferential Modeling Workflow
+
+<center>
+![](Figures/workflow-inference.png){width=900px}
+</center>
+
 ## Build | Build a Statistical Model
 
 A model starts with a story, but we need to translate it into a mathematical equation. For example:
@@ -90,6 +96,12 @@ Every inferential model is a *simplification* of the *true* story (which we don'
 
 <center>
 ![](Figures/models_rockets.png){width=700px}
+</center>
+
+## Inferential Modeling Workflow
+
+<center>
+![](Figures/workflow-inference.png){width=900px}
 </center>
 
 ## Preprocess | Preprocess Data for Modeling
@@ -160,13 +172,31 @@ sub_category |>
   select(sub_category, ramen, dry_soup)
 ```
 
+## Inferential Modeling Workflow
+
+<center>
+![](Figures/workflow-inference.png){width=900px}
+</center>
+
 ## Fit | Fit the Model
 
 When we **fit** the model (a.k.a., training, calibrating, or estimating the model) we are getting parameter estimates.
 
+## Inferential Modeling Workflow
+
+<center>
+![](Figures/workflow-inference.png){width=900px}
+</center>
+
 ## Evaluate | Parameter Estimates, Significance, and Predictive Fit
 
 Our goal is to use the model to *estimate* the parameters from the data. In other words, parameter estimates are the information we are extracting from the data to inform our managerial decision.
+
+## Inferential Modeling Workflow
+
+<center>
+![](Figures/workflow-inference.png){width=900px}
+</center>
 
 ## Predict | Counterfactual Predictions
 
@@ -182,7 +212,7 @@ Specifically, what would happen if we allocated certain amounts of `promotion_sp
 
 Using evidence to learn about what we don't (or *can't*) observe is tied closely to both the scientific process and faith.
 
-1. We have a story about the data generating process.
+1. We are interested in a story (or process).
 2. We turn that story into a model and fit it to data.
 3. We evaluate the evidence, conditioned on our model.
 4. We use what we learn to refine our understanding of what we don't (or *can't*) observe, learning line upon line. 
@@ -194,7 +224,7 @@ How is this same process described in Moroni 10:3-5?
 *Summary*
 
 - Discussed using models for inference, including an inferential workflow.
-- Started with a story of the data generating process and translated it into a statistical model.
+- Started with a story, and translated it into a statistical model.
 
 *Next Time*
 
@@ -206,7 +236,7 @@ How is this same process described in Moroni 10:3-5?
 
 ## Exercise 8
 
-1. Finish downloading code and materials from RStudio on Posit Cloud and Canvas and organizing your course folder.
-2. Install the {tidyverse} and {tidymodels} packages locally.
-3. Read the case and write how you might meet the expectations (no more than one page) in Quarto. Render as a Word document and submit on Canvas.
+1. Do a check-in. What worked well for you in this past unit? What didn't go well? If you have any questions or need support, reach out to a TA or the instructor (you are not graded on this part!)
+2. Have you stayed organized? If not, go back and organize the material from Unit 1. Recommit yourself to keeping files organized on your computer for Unit 2. (again - not graded on this, it's for your benefit!)
+3. Read 'Case-02-Nielsen-Sales.pdf' document that is posted on Canvas (it is located in the same subsection as this lecture). Write a response about how you might analyze the data to address the client's needs (no more than a page). Submit your response as a Word document on Canvas.
 
