@@ -48,7 +48,7 @@ Inference is needed for managerial decisions in marketing because we often want 
 For example, suppose we are now consulting for Kroger, a large client in the grocery/CPG industry. The client is interested in the best way to allocate promotional spending in the soup category.
 
 - What data would we use to inform this decision?
-- What is a possible process we don't observe that resulted in this data?
+- What is a possible process we don't observe that produces sales of soup products?
 
 Your story is the beginning of a model.
 
@@ -84,7 +84,7 @@ Are we missing anything to this story?
 
 ---
 
-To make this a *statistical* model we need to express that our model is not going to explain everything about the data generating process:
+To make this a *statistical* model we need to express that our model is not going to explain everything about our story:
 
 $$\text{sales} = \beta_0 + \beta_1 \times \text{promotion_spend} + \epsilon$$
 
@@ -234,7 +234,7 @@ How is this same process described in Moroni 10:3-5?
 
 - [Faith and Science: Symbiotic Pathways to Truth](https://speeches.byu.edu/talks/jamie-jensen/faith-science-symbiotic-pathways-truth/)
 
-## Exercise 8
+## Exercise 6
 
 1. Do a check-in. What worked well for you in this past unit? What didn't go well? If you have any questions or need support, reach out to a TA or the instructor (you are not graded on this part!)
 2. Have you stayed organized? If not, go back and organize the material from Unit 1. Recommit yourself to keeping files organized on your computer for Unit 2. (again - not graded on this, it's for your benefit!)
