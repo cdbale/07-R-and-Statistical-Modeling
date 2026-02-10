@@ -19,7 +19,7 @@ output:
 
 ## Inference
 
-Remember that models *extract information* from the data to inform our managerial decision. While data wrangling and visualization can *suggest* patterns of interest, a model is often needed.
+Models *extract information* from the data to inform our managerial decision. While data wrangling and visualization can *suggest* patterns of interest, a model is often needed.
 
 How we model the data depends on if we care about **inference** or only about *prediction*.
 
